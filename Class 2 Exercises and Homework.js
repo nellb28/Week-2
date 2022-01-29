@@ -71,12 +71,23 @@ console.log('********************************** DO NOT FORGET THIS**************
 // i.e. '1/21/2019' - but this could be any date.
 // Convert this string to a Date
 const assignmentDate = '1/21/2019';
-
+console.log(typeof assignmentDate);
+const convertedDate = new Date(assignmentDate);
+console.log(typeof convertedDate);
+console.log(convertedDate);
 
 // 8. Create a new Date instance to represent the dueDate.  
 // This will be exactly 7 days after the assignment date.
+const dueDate = convertedDate.setDate(convertedDate.getDate() + 7);
+console.log(typeof dueDate);
+// console.log(dueDate.toLocaleDateString("en-US"));
 
-
+// // Create new Date instance
+// var date = new Date();
+// console.log(date.toLocaleDateString("en-US"));
+// // Add a day
+// date.setDate(date.getDate() + 1);
+// console.log(date);
 // 9. Use dueDate values to create an HTML time tag in format
 // <time datetime="YYYY-MM-DD">Month day, year</time>
 // I have provided a months array to help
