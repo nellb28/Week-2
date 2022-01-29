@@ -5,48 +5,14 @@
 // - 'favorite food'
 // - bestFriend (object with the same 3 properties as above)
 
-const bestFriend = {
-  firstName: "Duane",
-  lastName: "Sanser",
-  'favorite food' : 'Pizza',
-};
-
-const firstName = 'Nell';
-const lastName = 'Bee';
-
-const me = {
-  firstName,
-  lastName,
-  'favorite food' : 'Pizza',
-  bestFriend
-};
 
 // 2. console.log best friend's firstName and your favorite food
-console.log("My best friend is " + me.bestFriend.firstName);
-console.log("My favorite food is " + me["favorite food"]);
+
 
 // 3. Create an array to represent this tic-tac-toe board
 // -O-
 // -XO
 // X-X
-
-//As I create this tic-tac-toe board, I wonder how hard it would be to create something like this
-//https://www.mathsisfun.com/games/chess-ws.html
-const ticTacToe = [[' ','O',' '],[' ','X','O'],[' ','X','X'],]
-let row = '| ';
-
-console.log('_____________');
-
-for (let i = 0; i < 3; i++) {
-  for (let j = 0; j < 3; j++) {
-      row = row + ticTacToe[i][j] + ' | ';
-  }
-
-  console.log(row);
-  console.log('_____________');
-  row = '| ';
-}
-
 
 
 // 4. After the array is created, 'O' claims the top right square.
