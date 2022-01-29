@@ -35,26 +35,29 @@ console.log("My favorite food is " + me["favorite food"]);
 const ticTacToe = [[' ','O',' '],[' ','X','O'],[' ','X','X'],]
 let row = '| ';
 
-console.log('_____________');
-
-for (let i = 0; i < 3; i++) {
-  for (let j = 0; j < 3; j++) {
-      row = row + ticTacToe[i][j] + ' | ';
-  }
-
-  console.log(row);
+function printTicTacToeBoard() {
   console.log('_____________');
-  row = '| ';
-}
 
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+        row = row + ticTacToe[i][j] + ' | ';
+    }
 
+    console.log(row);
+    console.log('_____________');
+    row = '| ';
+  }
+};
+
+printTicTacToeBoard();
 
 // 4. After the array is created, 'O' claims the top right square.
 // Update that value.
-
+console.log("Adding move...");
+ticTacToe[0][2] = 'O';
 
 // 5. Log the grid to the console.
-
+printTicTacToeBoard();
 
 // 6. You are given an email as string myEmail, make sure it is in correct email format.
 // Should be 1 or more characters, then @ sign, then 1 or more characters, then dot, then one or more characters - no whitespace
