@@ -78,8 +78,10 @@ console.log(convertedDate);
 
 // 8. Create a new Date instance to represent the dueDate.  
 // This will be exactly 7 days after the assignment date.
-const dueDate = convertedDate.setDate(convertedDate.getDate() + 7);
+const dueDate = new Date(convertedDate.setDate(convertedDate.getDate() + 7));
 console.log(typeof dueDate);
+console.log(dueDate);
+
 // console.log(dueDate.toLocaleDateString("en-US"));
 
 // // Create new Date instance
