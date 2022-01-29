@@ -6,8 +6,8 @@
 // - bestFriend (object with the same 3 properties as above)
 
 const bestFriend = {
-  firstName: "Duane",
-  lastName: "Sanser",
+  firstName: 'Duane',
+  lastName: 'Sanders',
   'favorite food' : 'Pizza',
 };
 
@@ -22,8 +22,8 @@ const me = {
 };
 
 // 2. console.log best friend's firstName and your favorite food
-console.log("My best friend is " + me.bestFriend.firstName);
-console.log("My favorite food is " + me["favorite food"]);
+console.log('My best friend is ' + me.bestFriend.firstName);
+console.log('My favorite food is ' + me['favorite food']);
 
 // 3. Create an array to represent this tic-tac-toe board
 // -O-
@@ -53,7 +53,7 @@ printTicTacToeBoard();
 
 // 4. After the array is created, 'O' claims the top right square.
 // Update that value.
-console.log("Adding move...");
+console.log('Adding move...');
 ticTacToe[0][2] = 'O';
 
 // 5. Log the grid to the console.
@@ -65,7 +65,7 @@ printTicTacToeBoard();
 // Hints:
 // - Use rubular to check a few emails: https://rubular.com/
 // - Use regexp test method https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
-
+console.log('********************************** DO NOT FORGET THIS*******************************');
 
 // 7. You are given an assignmentDate as a string in the format "month/day/year"
 // i.e. '1/21/2019' - but this could be any date.
