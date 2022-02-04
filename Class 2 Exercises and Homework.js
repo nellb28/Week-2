@@ -65,17 +65,10 @@ printTicTacToeBoard();
 // Hints:
 // - Use rubular to check a few emails: https://rubular.com/
 // - Use regexp test method https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
-const email = "foo@bar.baz"
+const email = 'foo@bar.baz'
 //const regex = new RegExp('//[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+'); //not sure why this works in rubular but not javascript
 const regex = new RegExp('[a-zA-Z]+@[a-zA-Z]+.[a-zA-Z]+');
-console.log("Regex evaluation of email is " + regex.test(email));
-
-/*
-const str = 'table football';
-const regex = new RegExp('foo*');
-const globalRegex = new RegExp('foo*', 'g');
-console.log(regex.test(str));
-*/
+console.log('Regex evaluation of email is ' + regex.test(email));
 
 // 7. You are given an assignmentDate as a string in the format "month/day/year"
 // i.e. '1/21/2019' - but this could be any date.
@@ -128,7 +121,7 @@ const months = [
 ];
 
 //need to figure out how to extend calls across multiple lines.
-let newlyFormattedDate =  "<time datetime=\"" + prettyDueDate + "\">" + months[dueDate.getMonth()] + " "+ dueDate.getDate() + "," + dueDate.getFullYear()  + "</time>";
+let newlyFormattedDate =  '<time datetime=\"' + prettyDueDate + '\">' + months[dueDate.getMonth()] + ' '+ dueDate.getDate() + ',' + dueDate.getFullYear()  + '</time>';
 
 // 10. log this value using console.log
 console.log(newlyFormattedDate)
