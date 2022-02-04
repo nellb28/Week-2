@@ -65,7 +65,7 @@ printTicTacToeBoard();
 // Hints:
 // - Use rubular to check a few emails: https://rubular.com/
 // - Use regexp test method https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
-console.log('********************************** DO NOT FORGET THIS*******************************');
+
 
 // 7. You are given an assignmentDate as a string in the format "month/day/year"
 // i.e. '1/21/2019' - but this could be any date.
@@ -81,15 +81,24 @@ console.log(convertedDate);
 const dueDate = new Date(convertedDate.setDate(convertedDate.getDate() + 7));
 console.log(typeof dueDate);
 console.log(dueDate);
+let prettyDueDate = formatDate(dueDate);
+console.log('FORMATTED = ' + prettyDueDate);
 
-// console.log(dueDate.toLocaleDateString("en-US"));
+//This could probably be handled with a javascript format method
+function formatDate(date) {
+  var d = new Date(date);
+  var month = '' + (d.getMonth());
+  var day = '' + d.getDate();
+  var year = d.getFullYear();
 
-// // Create new Date instance
-// var date = new Date();
-// console.log(date.toLocaleDateString("en-US"));
-// // Add a day
-// date.setDate(date.getDate() + 1);
-// console.log(date);
+  if (month.length < 2) 
+    month = '0' + month;
+  if (day.length < 2) 
+    day = '0' + day;
+
+  return [year, month, day, ].join('-');
+}
+
 // 9. Use dueDate values to create an HTML time tag in format
 // <time datetime="YYYY-MM-DD">Month day, year</time>
 // I have provided a months array to help
@@ -108,5 +117,9 @@ const months = [
   'December'
 ];
 
+//need to figure out how to extend calls across multiple lines.
+let newlyFormattedDate =  "<time datetime=\"" + prettyDueDate + "\">" + months[dueDate.getMonth()] + " "+ dueDate.getDate() + "," + dueDate.getFullYear()  + "</time>";
 
 // 10. log this value using console.log
+console.log(newlyFormattedDate)
+
