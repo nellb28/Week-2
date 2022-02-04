@@ -65,7 +65,16 @@ printTicTacToeBoard();
 // Hints:
 // - Use rubular to check a few emails: https://rubular.com/
 // - Use regexp test method https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
+const email = "foo@bar.baz"
+const regex = new RegExp("//[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+");
+console.log("Regex evaluation of email is " + regex.test(email));
 
+/*
+const str = 'table football';
+const regex = new RegExp('foo*');
+const globalRegex = new RegExp('foo*', 'g');
+console.log(regex.test(str));
+*/
 
 // 7. You are given an assignmentDate as a string in the format "month/day/year"
 // i.e. '1/21/2019' - but this could be any date.
