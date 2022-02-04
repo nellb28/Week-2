@@ -66,7 +66,8 @@ printTicTacToeBoard();
 // - Use rubular to check a few emails: https://rubular.com/
 // - Use regexp test method https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
 const email = "foo@bar.baz"
-const regex = new RegExp("//[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+");
+//const regex = new RegExp('//[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+'); //not sure why this works in rubular but not javascript
+const regex = new RegExp('[a-zA-Z]+@[a-zA-Z]+.[a-zA-Z]+');
 console.log("Regex evaluation of email is " + regex.test(email));
 
 /*
